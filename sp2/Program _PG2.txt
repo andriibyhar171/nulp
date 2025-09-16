@@ -1,0 +1,34 @@
+PROGRAM _PG2;
+DATA LONG INT _AA0, _BB0, _CC0, _MM0;
+BEGIN
+  SCAN _AA0;
+  SCAN _BB0;
+  SCAN _CC0;
+
+  IF ( (_AA0 >= _BB0) AND (_AA0 >= _CC0) ) {
+      _AA0 :> _MM0;
+  } ELSE IF ( (_BB0 >= _AA0) AND (_BB0 >= _CC0) ) {
+      _BB0 :> _MM0;
+  } ELSE {
+      _CC0 :> _MM0;
+  }
+  PRINT _MM0;
+
+  IF ( (_AA0 EQ _BB0) AND (_AA0 EQ _CC0) AND (_BB0 EQ _CC0) ) {
+      PRINT 1;
+  } ELSE {
+      PRINT 0;
+  }
+
+  IF ( (NOT (_AA0 >= 0)) || (NOT (_BB0 >= 0)) || (NOT (_CC0 >= 0)) ) {
+      PRINT -1;
+  } ELSE {
+      PRINT 0;
+  }
+
+  IF ( _AA0 >= (_BB0 ADD _CC0) ) {
+      PRINT 10;
+  } ELSE {
+      PRINT 0;
+  }
+END

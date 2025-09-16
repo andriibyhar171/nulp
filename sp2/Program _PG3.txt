@@ -1,0 +1,18 @@
+PROGRAM _PG3;
+DATA LONG INT _AA0, _BB0, _CA0, _CB0, _XV0;
+BEGIN
+  SCAN _AA0;
+  SCAN _BB0;
+
+  FOR _BB0 :> _CA0 DOWNTO _AA0 DO {
+      PRINT (_CA0 MUL _CA0);
+  }
+
+  0 :> _XV0;
+  FOR _AA0 :> _CA0 DOWNTO 1 DO {
+      FOR _BB0 :> _CB0 DOWNTO 1 DO {
+          (_XV0 ADD 1) :> _XV0;
+      }
+  }
+  PRINT _XV0;
+END
