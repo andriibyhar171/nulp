@@ -11,8 +11,9 @@ BEGIN
   0 :> _XV0;
   FOR _AA0 :> _CA0 DOWNTO 1 DO {
       FOR _BB0 :> _CB0 DOWNTO 1 DO {
-          (_XV0 ADD 1) :> _XV0;
+          _XV0 ADD 1 :> _XV0;
       }
   }
   PRINT _XV0;
 END
+
