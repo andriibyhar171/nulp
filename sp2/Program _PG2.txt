@@ -20,7 +20,7 @@ BEGIN
       PRINT 0;
   }
 
-  IF  (_AA0 < 0)) ||  (_BB0 < 0)) ||  (_CC0 < 0) {
+  IF  (_AA0 < 0) ||  (_BB0 < 0) ||  (_CC0 < 0) {
       PRINT -1;
   } ELSE {
       PRINT 0;
@@ -32,5 +32,6 @@ BEGIN
       PRINT 0;
   }
 END
+
 
 
